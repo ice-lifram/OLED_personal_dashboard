@@ -1,4 +1,4 @@
-# Nano Productivity Dashboard
+# Ice Lifram's Productivity Desk Dashboard Console
 
 A modular Arduino Nano project that displays environmental information and dashboard pages on an OLED display. The project is intentionally designed as a **learning-oriented skeleton**, allowing the developer to gradually implement features while maintaining a clean and scalable architecture.
 
