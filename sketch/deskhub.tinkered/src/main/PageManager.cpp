@@ -55,12 +55,6 @@ void PageManager::drawCurrentPage() {
             case PAGE_ENVIRONMENT:
                 drawEnvironmentPage();
                 break;
-            case PAGE_PRESENCE:
-                drawPresencePage();
-                break;
-            case PAGE_SYSTEM:
-                drawSystemPage();
-                break;
             case PAGE_QUOTES:
                 drawQuotesPage();
                 break;
@@ -155,54 +149,9 @@ void PageManager::drawEnvironmentPage() {
     String light = "Light: " + String(lightLevel);
     displayMgr->drawText(0, 40, light);
     displayMgr->drawText(0, 52, getLightDescription(lightLevel));
-    
-    String sound = "Sound: ";
-    sound += sensorMgr->getSoundDetected() ? "Detected" : "Quiet";
-    displayMgr->drawText(0, 64, sound);
+ 
 }
 
-void PageManager::drawPresencePage() {
-    displayMgr->setFont(u8g2_font_ncenB08_tr);
-    displayMgr->drawText(30, 10, "Presence");
-    
-    displayMgr->setFont(u8g2_font_6x10_tf);
-    
-    float distance = sensorMgr->getDistance();
-    
-    if (distance < 0) {
-        displayMgr->drawText(0, 30, "Distance: --");
-        displayMgr->drawText(0, 45, "Status: No signal");
-    } else {
-        String dist = "Distance: " + String(distance, 1) + " cm";
-        displayMgr->drawText(0, 30, dist);
-        
-        String status = "Status: ";
-        if (distance < 30) {
-            status += "Very close";
-        } else if (distance < 100) {
-            status += "Present";
-        } else {
-            status += "Away";
-        }
-        displayMgr->drawText(0, 45, status);
-    }
-}
-
-void PageManager::drawSystemPage() {
-    displayMgr->setFont(u8g2_font_ncenB08_tr);
-    displayMgr->drawText(35, 10, "System");
-    
-    displayMgr->setFont(u8g2_font_6x10_tf);
-    
-    String uptime = "Up: " + Utility::formatTime(Utility::getUptime());
-    displayMgr->drawText(0, 26, uptime);
-    
-    String ram = "RAM: " + String(Utility::getFreeRAM()) + " B";
-    displayMgr->drawText(0, 40, ram);
-    
-    String version = "FW: " + String(FIRMWARE_VERSION);
-    displayMgr->drawText(0, 54, version);
-}
 
 void PageManager::drawQuotesPage() {
     displayMgr->setFont(u8g2_font_ncenB08_tr);

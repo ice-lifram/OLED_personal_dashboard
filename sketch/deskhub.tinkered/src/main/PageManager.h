@@ -13,8 +13,6 @@ enum PageType {
     PAGE_POMODORO,
     PAGE_SESSION,
     PAGE_ENVIRONMENT,
-    PAGE_PRESENCE,
-    PAGE_SYSTEM,
     PAGE_QUOTES,
     PAGE_COUNT
 };
@@ -41,8 +39,6 @@ private:
     void drawPomodoroPage();
     void drawSessionPage();
     void drawEnvironmentPage();
-    void drawPresencePage();
-    void drawSystemPage();
     void drawQuotesPage();
     
     String getLightDescription(int level);

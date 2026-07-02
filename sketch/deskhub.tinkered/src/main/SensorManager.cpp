@@ -13,7 +13,7 @@ void SensorManager::init() {
     temperature = 0.0;
     lightLevel = 0;
     soundDetected = false;
-    distance = 0.0;
+    distance = 0;
     lastSensorRead = 0;
 }
 
@@ -69,4 +69,4 @@ void SensorManager::readUltrasonic() {
     } else {
         distance = duration * 0.034 / 2.0;
     }
-}
+} 
