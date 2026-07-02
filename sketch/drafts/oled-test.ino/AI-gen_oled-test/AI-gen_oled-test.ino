@@ -205,7 +205,7 @@ void loop()
     // One-second tasks
     if (now - secondTimer >= 1000)
     {
-        secondTimer += 1000;
+        secondTimer += 500;
 
         uptimeSeconds++;
 

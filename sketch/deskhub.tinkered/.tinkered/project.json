@@ -1,0 +1,13 @@
+{
+  "id": "993126b5-bce5-4103-a6b3-e85bee7f2bfb",
+  "name": "DeskHub",
+  "path": "DeskHub",
+  "board": "arduino",
+  "boardId": "arduino-nano",
+  "boardFqbn": "arduino-nano",
+  "createdAt": 1782979380781,
+  "updatedAt": 1782981107044,
+  "schemaVersion": 1,
+  "exportedAt": "2026-07-02T08:31:50.825Z",
+  "exportedBy": "tinkered-app/1.0"
+}
