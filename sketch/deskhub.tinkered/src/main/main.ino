@@ -17,7 +17,7 @@ void setup() {
     
     displayMgr.init();
     displayMgr.showSplash();
-    delay(2000);
+    delay(500);
     
     pomodoroMgr.init();
     sensorMgr.init();
